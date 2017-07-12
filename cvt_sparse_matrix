@@ -1,1 +1,11 @@
+ll = [[(1,1),(2,3),(10,1)],[(2,5)],[(2,6),(5,2),(6,4)]]
 
+position = [[x[0] for x in l] for l in ll ]
+data = [[x[1] for x in l] for l in ll ]
+
+l = lil_matrix((3, 11))
+l.rows = position
+l.data = data
+
+c = l.tocsr()
+c.A
